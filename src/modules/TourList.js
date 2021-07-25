@@ -7,13 +7,13 @@ const  GetTourList = () => {
   
   const onClick = () => {
     const value =document.getElementById("tourList-select").value ; 
-    console.log('value?' , value);
+    if (value === "none") {
+      alert("관광지 유형을 선택하세요.")
+    }
     const FindSight = tourList.filter( t => t.tourSe === value);
-    console.log("find" ,FindSight);
     setSights(FindSight )
 
   };
-  console.log("sight", sights);
   return (
     <TourComponent 
       onClick ={onClick}

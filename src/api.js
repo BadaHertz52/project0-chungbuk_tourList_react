@@ -1,3 +1,4 @@
+// 공공 api 주소 :https://tour.chungbuk.go.kr/openapi/tourInfo/attr.do 
 
 export const tourList =  
 [
