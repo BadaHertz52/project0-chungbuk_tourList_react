@@ -46,22 +46,24 @@ const TourList = ({sight}) => {
 function TourComponent ({ onClick ,sights}){
 
   return(
-    
-    <div className="inner" >
-      <section className="tourList">
-          <select id="tourList-select">
-              <option value="none">=== 선택 ===</option>
-              <option value="박물관" >박물관</option>
-              <option   value="체험" >체험</  option>
-              <option value="공원/유원지" >공원/유원지</option>
-              <option value="산/계곡">산/계곡</option>
-          </select>
-          <button onClick={onClick} >조회</button>
-      </section>
-      <section className="tourInform" >
-        {sights.map (sight=> <TourList sight={sight} />)}
-      </section>
-    </div>
+    <>
+      <div className="header">충청북도 관광명소</div>
+      <div className="inner" >
+        <section className="tourList">
+            <select id="tourList-select">
+                <option value="none">=== 선택 ===</option>
+                <option value="박물관" >박물관</option>
+                <option   value="체험" >체험</  option>
+                <option value="공원/유원지" >공원/유원지</option>
+                <option value="산/계곡">산/계곡</option>
+            </select>
+            <button onClick={onClick} >조회</button>
+        </section>
+        <section className="tourInform" >
+          {sights.map (sight=> <TourList sight={sight} />)}
+        </section>
+      </div>
+    </>
   )
 }
 
