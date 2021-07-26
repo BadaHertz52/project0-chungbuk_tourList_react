@@ -22,13 +22,18 @@ i {
 
 .tourList {
   margin: 0 40%;
+  height: 30px;
+  display: flex;
+  justify-content: space-around;
+}
+.tourList select {
+  margin-right: 5%;
 }
 .tourList select, .tourList option {
   font-size: 1vw;
 }
 .tourList button {
-  margin-left: 1%;
-  font-size: 0.8vw;
+  font-size: 1vw;
 }
 
 .tourInform {

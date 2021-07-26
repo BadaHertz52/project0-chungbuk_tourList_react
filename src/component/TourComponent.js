@@ -65,7 +65,7 @@ function TourComponent ({ onClick ,sights}){
               <option value="청주시">청주시</option>
               <option value="괴산군">괴산군</option>
             </select>
-            <button onClick={onClick} >조회</button>
+            <button onClick={onClick}> click </button>
         </section>
         <section className="tourInform" >
           {sights.map (sight=> <TourList sight={sight} />)}
