@@ -1,67 +1,78 @@
-a:link, a:visited{
+a:link, a:visited {
   text-decoration: none;
   color: black;
   font-size: 1.2rem;
 }
-i{
+
+i {
   font-size: 1rem;
 }
+
 .inner {
   margin: 2% 15%;
 }
-.header{
+
+.header {
   margin-top: 5%;
   margin-bottom: 0;
   text-align: center;
   font-size: 2vw;
   font-weight: 800;
 }
-.tourList{
-  margin:0 40% ;
+
+.tourList {
+  margin: 0 40%;
 }
-.tourList select ,.tourList option {
+.tourList select, .tourList option {
   font-size: 1vw;
 }
-.tourList button{
+.tourList button {
   margin-left: 1%;
   font-size: 0.8vw;
 }
+
 .tourInform {
   width: 100%;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
 }
-.sight {
+.tourInform .sight {
   background-color: rgba(248, 248, 248, 0.767);
   margin-top: 5%;
-}
-.tourInform .sight{
   margin-right: 2%;
-  width: 30vw ;
-  height:35vw ;   
+  width: 30vw;
+  height: 35vw;
 }
-img{
+
+img {
   width: 30vw;
   height: 15vw;
+  border-radius: 30px;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
 }
-.sight_name{
-  margin: 2% 0% ;
+
+.sight_name {
+  margin: 2% 0%;
 }
-.inform1 ,.inform2{
+.sight_name a {
+  display: block;
+  text-align: center;
+  padding: 2% 0;
+}
+
+.inform1, .inform2 {
   padding-left: 5%;
   padding-right: 5%;
 }
-.sight_name a {
-  display:block;
-  text-align: center;
-}
-.inform1 p{
+
+.inform1 p {
   word-wrap: break-word;
 }
 
-.inform2{
-  width:28vw;
+.inform2 {
+  width: 28vw;
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: normal;
@@ -74,3 +85,4 @@ img{
   -webkit-box-orient: vertical;
 }
 
+/*# sourceMappingURL=TourComponent.css.map */

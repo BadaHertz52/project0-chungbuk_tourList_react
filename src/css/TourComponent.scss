@@ -1,0 +1,82 @@
+@mixin border-radius($radius) {
+  border-radius: $radius;
+  -webkit-border-radius:$radius;
+  -moz-border-radius:$radius;
+}
+a:link, a:visited{
+  text-decoration: none;
+  color: black;
+  font-size: 1.2rem;
+}
+i{
+  font-size: 1rem;
+}
+.inner {
+  margin: 2% 15%;
+}
+.header{
+  margin-top: 5%;
+  margin-bottom: 0;
+  text-align: center;
+  font-size: 2vw;
+  font-weight: 800;
+}
+.tourList{
+  margin:0 40% ;
+  select, option{
+    font-size: 1vw;
+  }
+  button{
+  margin-left: 1%;
+  font-size: 0.8vw;
+  }
+}
+
+.tourInform {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  .sight {
+    background-color: rgba(248, 248, 248, 0.767);
+    margin-top: 5%;
+    margin-right: 2%;
+    width: 30vw ;
+    height:35vw ;
+  }
+}
+img{
+  width: 30vw;
+  height: 15vw;
+  @include border-radius(30px);
+}
+.sight_name{
+  margin: 2% 0% ;
+  a{
+    display:block;
+    text-align: center;
+    padding: 2% 0;
+  }
+}
+.inform1 ,.inform2{
+  padding-left: 5%;
+  padding-right: 5%;
+}
+.inform1 p{
+  word-wrap: break-word;
+}
+
+.inform2{
+  width:28vw;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: normal;
+  line-height: 1.5rem;
+  height: 6rem;
+  text-align: left;
+  word-wrap: break-word;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+}
+

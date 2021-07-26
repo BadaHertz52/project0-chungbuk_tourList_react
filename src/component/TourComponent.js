@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import './TourComponent.css'; 
+import React from 'react';
+import '../css/TourComponent.css'; 
 import { FiCalendar ,FiPhoneCall ,FiNavigation } from "react-icons/fi";
 import { NameBlock } from './style';
 
@@ -23,7 +23,7 @@ const TourList = ({sight}) => {
   }
   return(
     <div className="sight" key={sight.tourNo}>
-      <img src={sight.thumbImg} alt={sight. tourNm}></img>
+      <img src={sight.thumbImg} alt={sight.tourNm}></img>
       <NameBlock value ={value} >
         <div className="sight_name"> 
           <a href={sight.hmpg} title="홈페이지로  이동합니다." rel="_blank">
@@ -50,12 +50,20 @@ function TourComponent ({ onClick ,sights}){
       <div className="header">충청북도 관광명소</div>
       <div className="inner" >
         <section className="tourList">
-            <select id="tourList-select">
+            <select id="tourList-type">
                 <option value="none">=== 선택 ===</option>
                 <option value="박물관" >박물관</option>
                 <option   value="체험" >체험</  option>
                 <option value="공원/유원지" >공원/유원지</option>
                 <option value="산/계곡">산/계곡</option>
+            </select>
+            <select id="tourList-location">
+              <option value="none">=== 선택 ===</option>
+              <option value="충주시">충주시</option>
+              <option value="보은군">보은군</option>
+              <option value="단양군">단양군</option>
+              <option value="청주시">청주시</option>
+              <option value="괴산군">괴산군</option>
             </select>
             <button onClick={onClick} >조회</button>
         </section>

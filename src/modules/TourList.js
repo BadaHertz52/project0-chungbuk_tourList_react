@@ -6,13 +6,19 @@ const  GetTourList = () => {
   const [sights ,setSights] = useState([ ]); 
   
   const onClick = () => {
-    const value =document.getElementById("tourList-select").value ; 
-    if (value === "none") {
-      alert("관광지 유형을 선택하세요.")
-    }
-    const FindSight = tourList.filter( t => t.tourSe === value);
-    setSights(FindSight )
+    const type_value =document.getElementById("tourList-type").value ; 
 
+    const location_value =document.getElementById("tourList-location").value;
+    if (type_value === "none" && location_value ==="none") {
+      alert(" 검색 옵션을 선택하세요.")
+    }
+    if(type_value !=='none' && location_value !=='none'){
+      setSights(tourList.filter(t => t.tourSe ===type_value && t.areaSe === location_value))
+    }else if(type_value !=='none' && location_value === 'none'){
+      setSights(tourList.filter( t => t.tourSe === type_value))
+    }else {
+      setSights(tourList.filter( t => t.areaSe === location_value)) 
+    } 
   };
   return (
     <TourComponent 
