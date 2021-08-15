@@ -1,49 +1,58 @@
 import React from 'react';
 import '../css/TourComponent.css'; 
-import { FiCalendar ,FiPhoneCall ,FiNavigation } from "react-icons/fi";
+import { FiCalendar ,FiPhoneCall ,FiNavigation ,FiXSquare} from "react-icons/fi";
 import { NameBlock } from './style';
 
-const TourList = ({sight}) => {
+const TourList = ({sight , moreInform ,closeInform}) => {
   let value ; 
   switch (sight.tourSe) {
     case "박물관":
-      value = '#ebd3ad';
+      value = '#ffd899';
       break;
     case "체험" :
-      value = 'hsl(144, 15%, 87%)' ;
+      value = '#a6ddf5' ;
     break;
     case "공원/유원지":
       value = 'rgb(255, 204, 213)';
       break;
     case "산/계곡" :
-      value = 'rgb(179, 219, 191)' ;
+      value = 'rgb(148, 219, 170)' ;
       break;
     default:
       break;
+    
   }
   return(
-    <div className="sight" key={sight.tourNo}>
-      <img src={sight.thumbImg} alt={sight.tourNm}></img>
-      <NameBlock value ={value} >
-        <div className="sight_name"> 
-          <a href={sight.hmpg} title="홈페이지로  이동합니다." rel="_blank">
-            {sight.tourNm}
-          </a>
-        </div>
-      </NameBlock>
-      <div className="inform1">
-        <p><FiNavigation/> {'\u00A0'} {sight.adres}</p>
-        <p><FiCalendar/> {'\u00A0'} {sight.operTime}</p>
-        <p><FiPhoneCall/>{'\u00A0'}{'\u00A0'}{sight.telno}</p>
+    <div className="sight " key={sight.tourNo}>
+      <a href  className="close_btn off" onClick={closeInform}><FiXSquare/></a>
+      <div className="m_css">
+        <img src={sight.thumbImg} alt={sight.tourNm}></img>
+        <NameBlock value ={value} >
+          <section className="sight_name"> 
+            <a href={sight.hmpg} title="홈페이지로    이동합니다." rel="_blank">
+              {sight.tourNm}
+            </a>
+          </section>
+          </NameBlock>
       </div>
-      <div className="inform2">
-        {sight.intrcn}
+      <div className="m_css">
+        <section className="inform1">
+          <p><FiNavigation/> {'\u00A0'} {sight.adres}</p>
+          <p><FiCalendar/> {'\u00A0'} {sight.operTime}</p>
+          <p><FiPhoneCall/>{'\u00A0'}{'\u00A0'}{sight.telno}</p>
+        </section>
+        <section className="inform2">
+          <div>{sight.intrcn}</div>
+          <div className="more">
+            <a href onClick={moreInform} > ...더 보기... </a>
+          </div>
+        </section>
       </div>
-  </div>
+    </div>
   )
 }
 
-function TourComponent ({ onClick ,sights}){
+function TourComponent ({ notFind, onClick ,sights ,moreInform ,closeInform}){
 
   return(
     <>
@@ -67,8 +76,13 @@ function TourComponent ({ onClick ,sights}){
             </select>
             <button onClick={onClick}> click </button>
         </section>
+        <section>
+          <div className="notFind">
+            "찾으시는 장소에 대한 정보가 없습니다."
+          </div>
+        </section>
         <section className="tourInform" >
-          {sights.map (sight=> <TourList sight={sight} />)}
+          {sights.map (sight=> <TourList  sight={sight}  moreInform ={moreInform} close={closeInform}/>)}
         </section>
       </div>
     </>
