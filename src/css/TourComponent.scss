@@ -6,7 +6,7 @@
 a:link, a:visited{
   text-decoration: none;
   color: black;
-  font-size: 1.2rem;
+
 }
 i{
   font-size: 1rem;
@@ -33,7 +33,6 @@ i{
     font-size: 1vw;
   }
   button{
-  
   font-size: 1vw;
   }
 }
@@ -48,7 +47,9 @@ i{
     margin-top: 5%;
     margin-right: 2%;
     width: 30vw ;
-    height:35vw ;
+  }
+  .sight.off{
+    display: none;
   }
 }
 img{
@@ -60,8 +61,9 @@ img{
   margin: 2% 0% ;
   a{
     display:block;
-    text-align: center;
+    text-align: center; 
     padding: 2% 0;
+    font-size: 1.4vw;
   }
 }
 .inform1 ,.inform2{
@@ -70,10 +72,13 @@ img{
 }
 .inform1 p{
   word-wrap: break-word;
+  font-size: 1.2vw;
 }
 
 .inform2{
   width:28vw;
+  font-size: 1.3vw;
+  div:first-child{
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: normal;
@@ -85,4 +90,161 @@ img{
   -webkit-line-clamp: 4;
   -webkit-box-orient: vertical;
 }
+}
+.more{
+  margin: 5% 30%;
+  
+}
+.more a:hover{
+  font-weight: bolder;
 
+} 
+.notFind{
+  display: none;
+}
+.notFind.on {
+  display: block;
+  font-size: 1.2vw;
+  text-align: center;
+  margin-top: 3.6vw;
+}
+//더 보기 관련 기능 
+.more.off {
+  display: none;
+}
+.sight.on {
+  position:relative ;
+  width: 80%;
+  height: auto;
+  margin-left: 20%;
+  background-color: rgba(245, 245, 245, 0.918);
+  .close_btn {
+    display: block;
+    position: absolute;
+    top:2vw;
+    right:5% ;
+    margin-bottom :10%;
+    font-size: 1.4rem;
+  }
+  img{
+    margin-top: 10%;
+    margin-left: 15%;
+    width: 70%;
+    height: auto;
+    @include border-radius(0px);
+  }
+  div{
+    width: 100%;
+  }
+  .inform2{
+    width:100%;
+    div:first-child{
+      width:90% ;
+      height: auto;
+      text-overflow:initial;
+      overflow:initial ;
+      white-space:initial;
+      line-height: 1.5rem;
+      text-align: left;
+      word-wrap: break-word;
+      -webkit-line-clamp:initial;
+      -webkit-box-orient: initial;
+    }
+  }
+}
+
+.close_btn.off{
+  display: none;
+}
+
+
+//media query
+@media (min-width:1024px) {
+  .sight_name{
+    a{
+      font-size:18px ;
+    }
+    
+  } 
+  .inform1 p{
+    font-size: 16px;
+  }
+  .inform2{
+    font-size: 14px;
+  }
+}
+  //태블릿
+@media (min-width:600px) and (max-width:768px) {
+  img{
+    width:174px;
+    height: 70%;
+    @include border-radius(10px);
+  }
+  .sight_name{
+    width: 174px;
+    height: 20%;
+  }
+  .tourInform .sight{
+    display: flex;
+    height: 170px;
+    width: 100%;
+    .m_css{
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 100%;
+    }
+    .inform1{
+      p:last-child{
+        display: none;
+        background-color: #a6ddf5;
+      }
+    }
+    .inform2{
+      width:90%;
+      div:first-child{
+      line-height: 1.5rem;
+      height: 3rem;
+      -webkit-line-clamp: 2;
+    }
+    }
+  }
+}
+  //모바일 L 이하
+@media (max-width:600px) {
+  .inner{
+    margin: 2% 8%
+  }
+  img{
+    margin: 0 10%;
+    width: 80% ;
+    height: 25vw ;
+    @include border-radius(8px);
+  }
+  .tourInform{
+    padding-top: 30px;
+    justify-content: space-around;
+    .sight{
+      margin:  0 10% 20px ;
+      width: 80%;
+     
+    }
+    .inform1 p:first-child{
+      word-break: keep-all;
+    }
+    .inform1 p:nth-child(3){
+      display: none;
+    }
+    .inform2{
+      width: 90%;
+      div:first-child{
+        line-height: 1.5rem;
+        height: 3rem;
+        -webkit-line-clamp: 2;
+      }
+    }
+  }
+  .notFind.on{
+    margin-top: 25px;
+  }
+}
