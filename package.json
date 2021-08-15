@@ -19,7 +19,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "build:sass" :"sass src/css/TourComponent.scss src/css/TourComponent.css"
+    "build:sass" :"sass src/css/TourComponent.scss src/css/TourComponent.css",
+    "deploy": "npm run build &&gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
@@ -27,6 +28,7 @@
       "react-app/jest"
     ]
   },
+  "homepage": "https://badahertz52.github.io/chungbuk_tourList_react/",
   "browserslist": {
     "production": [
       ">0.2%",
