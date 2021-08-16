@@ -20,7 +20,8 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "build:sass" :"sass src/css/TourComponent.scss src/css/TourComponent.css",
-    "deploy": "npm run build && yarn gh-pages -d build"
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
