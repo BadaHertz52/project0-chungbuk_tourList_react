@@ -8,6 +8,7 @@ a:link, a:visited{
   color: black;
 
 }
+
 i{
   font-size: 1rem;
 }
@@ -93,7 +94,6 @@ img{
 }
 .more{
   margin: 5% 30%;
-  
 }
 .more a:hover{
   font-weight: bolder;
@@ -109,7 +109,7 @@ img{
   margin-top: 3.6vw;
 }
 //더 보기 관련 기능 
-.more.off {
+.more.off  {
   display: none;
 }
 .sight.on {
@@ -125,6 +125,9 @@ img{
     right:5% ;
     margin-bottom :10%;
     font-size: 1.4rem;
+    border: 0;
+    outline: 0;
+    background-color: #fcfcfc00 
   }
   img{
     margin-top: 10%;

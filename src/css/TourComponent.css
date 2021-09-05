@@ -133,6 +133,9 @@ img {
   right: 5%;
   margin-bottom: 10%;
   font-size: 1.4rem;
+  border: 0;
+  outline: 0;
+  background-color: #fcfcfc00;
 }
 .sight.on img {
   margin-top: 10%;

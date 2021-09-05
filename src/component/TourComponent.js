@@ -24,7 +24,7 @@ const TourList = ({sight , moreInform ,closeInform}) => {
   }
   return(
     <div className="sight " key={sight.tourNo}>
-      <a href  className="close_btn off" onClick={closeInform}><FiXSquare/></a>
+      <button className="close_btn off" onClick={closeInform}><FiXSquare/></button>
       <div className="m_css">
         <img src={sight.thumbImg} alt={sight.tourNm}></img>
         <NameBlock value ={value} >
@@ -52,7 +52,7 @@ const TourList = ({sight , moreInform ,closeInform}) => {
   )
 }
 
-function TourComponent ({ notFind, onClick ,sights ,moreInform ,closeInform}){
+function TourComponent ({ onClick ,sights ,moreInform ,closeInform}){
 
   return(
     <>
@@ -60,14 +60,14 @@ function TourComponent ({ notFind, onClick ,sights ,moreInform ,closeInform}){
       <div className="inner" >
         <section className="tourList">
             <select id="tourList-type">
-                <option value="none">=== 선택 ===</option>
+                <option value="none">=== 유형 ===</option>
                 <option value="박물관" >박물관</option>
                 <option   value="체험" >체험</  option>
                 <option value="공원/유원지" >공원/유원지</option>
                 <option value="산/계곡">산/계곡</option>
             </select>
             <select id="tourList-location">
-              <option value="none">=== 선택 ===</option>
+              <option value="none">=== 지역 ===</option>
               <option value="충주시">충주시</option>
               <option value="보은군">보은군</option>
               <option value="단양군">단양군</option>
@@ -82,7 +82,7 @@ function TourComponent ({ notFind, onClick ,sights ,moreInform ,closeInform}){
           </div>
         </section>
         <section className="tourInform" >
-          {sights.map (sight=> <TourList  sight={sight}  moreInform ={moreInform} close={closeInform}/>)}
+          {sights.map (sight=> <TourList  sight={sight}  moreInform ={moreInform} closeInform={closeInform}/>)}
         </section>
       </div>
     </>
