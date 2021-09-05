@@ -1,5 +1,5 @@
 import React from 'react';
-import GetTourList from './modules/TourList';
+import GetTourList from './modules/GetTourList';
 
 function App() {
 
