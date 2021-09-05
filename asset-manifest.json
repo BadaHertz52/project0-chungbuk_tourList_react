@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/chungbuk_tourList_react/static/css/main.dfb16f44.chunk.css",
-    "main.js": "/chungbuk_tourList_react/static/js/main.32942579.chunk.js",
-    "main.js.map": "/chungbuk_tourList_react/static/js/main.32942579.chunk.js.map",
-    "runtime-main.js": "/chungbuk_tourList_react/static/js/runtime-main.a07a5fa1.js",
-    "runtime-main.js.map": "/chungbuk_tourList_react/static/js/runtime-main.a07a5fa1.js.map",
-    "static/js/2.33c46dac.chunk.js": "/chungbuk_tourList_react/static/js/2.33c46dac.chunk.js",
-    "static/js/2.33c46dac.chunk.js.map": "/chungbuk_tourList_react/static/js/2.33c46dac.chunk.js.map",
-    "static/js/3.39e341bb.chunk.js": "/chungbuk_tourList_react/static/js/3.39e341bb.chunk.js",
-    "static/js/3.39e341bb.chunk.js.map": "/chungbuk_tourList_react/static/js/3.39e341bb.chunk.js.map",
-    "index.html": "/chungbuk_tourList_react/index.html",
-    "static/css/main.dfb16f44.chunk.css.map": "/chungbuk_tourList_react/static/css/main.dfb16f44.chunk.css.map",
-    "static/js/2.33c46dac.chunk.js.LICENSE.txt": "/chungbuk_tourList_react/static/js/2.33c46dac.chunk.js.LICENSE.txt"
+    "main.css": "/project0-chungbuk_tourList_react/static/css/main.867ebcf5.chunk.css",
+    "main.js": "/project0-chungbuk_tourList_react/static/js/main.5495c734.chunk.js",
+    "main.js.map": "/project0-chungbuk_tourList_react/static/js/main.5495c734.chunk.js.map",
+    "runtime-main.js": "/project0-chungbuk_tourList_react/static/js/runtime-main.1b058b9a.js",
+    "runtime-main.js.map": "/project0-chungbuk_tourList_react/static/js/runtime-main.1b058b9a.js.map",
+    "static/js/2.2db185f3.chunk.js": "/project0-chungbuk_tourList_react/static/js/2.2db185f3.chunk.js",
+    "static/js/2.2db185f3.chunk.js.map": "/project0-chungbuk_tourList_react/static/js/2.2db185f3.chunk.js.map",
+    "static/js/3.39e341bb.chunk.js": "/project0-chungbuk_tourList_react/static/js/3.39e341bb.chunk.js",
+    "static/js/3.39e341bb.chunk.js.map": "/project0-chungbuk_tourList_react/static/js/3.39e341bb.chunk.js.map",
+    "index.html": "/project0-chungbuk_tourList_react/index.html",
+    "static/css/main.867ebcf5.chunk.css.map": "/project0-chungbuk_tourList_react/static/css/main.867ebcf5.chunk.css.map",
+    "static/js/2.2db185f3.chunk.js.LICENSE.txt": "/project0-chungbuk_tourList_react/static/js/2.2db185f3.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.a07a5fa1.js",
-    "static/js/2.33c46dac.chunk.js",
-    "static/css/main.dfb16f44.chunk.css",
-    "static/js/main.32942579.chunk.js"
+    "static/js/runtime-main.1b058b9a.js",
+    "static/js/2.2db185f3.chunk.js",
+    "static/css/main.867ebcf5.chunk.css",
+    "static/js/main.5495c734.chunk.js"
   ]
 }
