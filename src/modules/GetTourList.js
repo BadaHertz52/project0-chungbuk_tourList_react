@@ -33,7 +33,8 @@ const  GetTourList = () => {
     //이벤트가 발생한 객체의 부모 노드
     const target =e.target ;
     const parent  =target.parentNode.parentNode.parentNode.parentNode ; 
-    const more = parent.querySelector('.more') ;
+    const more = target.parentNode ;
+    console.log(more);
     const closeBtn = parent.querySelector(".close_btn");
     const sights = document.querySelectorAll('.sight'); 
     function ShowMoreInform (){
@@ -43,7 +44,7 @@ const  GetTourList = () => {
       sight.classList.toggle('off') 
       );
       closeBtn.classList.remove('off');
-      more.classList.toggle('off')
+      more.classList.add('off')
     }
     target.addEventListener('click' , ShowMoreInform());
   };
@@ -51,14 +52,14 @@ const  GetTourList = () => {
   const closeInform  =(e) => {
     // sight on 인거를 sight, sight off 였던 걸 sight로 
     const target = e.target ;
-    const more = target.parentNode.querySelector('.more') ;
+    const more = target.parentNode.parentNode.querySelector('.more') ;
     const sights = document.querySelectorAll('.sight'); 
-    console.log('sight node', sights);
+
     function CloseMoreInform (){
       sights.forEach(sight => 
         sight.classList.contains('off') ? sight.classList.remove('off'): sight.classList.remove('on'));
-      target.classList.add('off');
-      more.classList.remove('off')
+      target.parentNode.classList.add('off');
+      more.classList.remove('off');
     }
     target.addEventListener('click' ,CloseMoreInform())
 
