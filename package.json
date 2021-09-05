@@ -29,7 +29,7 @@
       "react-app/jest"
     ]
   },
-  "homepage": "https://badahertz52.github.io/project0-chungbuk_tourList_react/",
+  "homepage": "https://badahertz52.github.io/chungbuk_tourList_react/",
   "browserslist": {
     "production": [
       ">0.2%",
