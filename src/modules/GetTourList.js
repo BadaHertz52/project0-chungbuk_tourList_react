@@ -7,18 +7,20 @@ const  GetTourList = () => {
   
   const onClick = () => {
     const notFind =document.querySelector('.notFind');
-    notFind.classList.remove('on');
+    
     const type_value =document.getElementById("tourList-type").value ; 
     const location_value =document.getElementById("tourList-location").value;
     if (type_value === "none" && location_value ==="none") {
       alert(" 검색 옵션을 선택하세요.")
-    }
+    };
+
     if(type_value !=='none' && location_value !=='none'){
       setSights(tourList.filter(t => t.tourSe ===type_value && t.areaSe === location_value));
-      if(sights.length === 0) {
-      notFind.classList.toggle('on') ; 
-    }
-    }else if(type_value !=='none' && location_value === 'none'){
+      (sights.length === 0 ? 
+      notFind.classList.toggle('on'):
+      notFind.classList.remove('on')); 
+      
+    } else if(type_value !=='none' && location_value === 'none'){
       setSights(tourList.filter( t => t.tourSe === type_value));
       
     }else {
