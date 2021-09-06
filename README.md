@@ -1,6 +1,6 @@
 # 충청북도 관광지 소개 홈페이지
 
-😀[바로가기](https://badahertz52.github.io/chungbuk_tourList_react/)
+😀[바로가기]( https://badahertz52.github.io/project0-chungbuk_tourList_react/)
 
 ## 소개
 
